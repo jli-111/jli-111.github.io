@@ -1,0 +1,123 @@
+/* Shared visual treatment. These rules go at the end of App.css. */
+#about,
+#projects,
+#skills,
+#education,
+#certifications {
+  border-radius: 22px;
+  margin-block: 28px;
+  border: 1px solid rgba(104, 103, 80, 0.13);
+}
+
+/* Match the About background to the same section boundaries. */
+#about {
+  padding-inline: clamp(20px, 3vw, 40px);
+}
+.profile-hero::before {
+  inset: 0;
+  border-radius: inherit;
+}
+
+/* A warm overlay unifies photographs with different lighting. */
+#projects,
+#education,
+#certifications {
+  background-color: #f5f2e9;
+  background-image:
+    linear-gradient(90deg,
+      rgba(250, 248, 242, 0.97) 0%,
+      rgba(250, 248, 242, 0.93) 48%,
+      rgba(250, 248, 242, 0.56) 100%),
+    var(--section-photo);
+  background-size: cover;
+  background-position: center, var(--photo-position, center);
+  padding: clamp(26px, 4vw, 48px);
+}
+
+#projects {
+  --section-photo: url('./assets/project-background.jpg');
+  --photo-position: center 54%;
+}
+#education {
+  --section-photo: url('./assets/education-background.jpg');
+  --photo-position: center 57%;
+  min-height: 320px;
+}
+#certifications {
+  --section-photo: url('./assets/certification-background.jpg');
+  --photo-position: center 58%;
+  min-height: 320px;
+}
+
+/* Light surfaces retain readability without stark white panels. */
+#projects .project-card {
+  background: rgba(253, 252, 247, 0.8);
+  border-color: rgba(108, 111, 88, 0.18);
+  border-radius: 14px;
+  box-shadow: 0 10px 26px rgba(66, 60, 43, 0.04);
+}
+#projects .project-preview {
+  background: rgba(235, 239, 224, 0.68);
+}
+#projects .project-details {
+  background: rgba(248, 249, 240, 0.91);
+}
+#projects .section-heading > p,
+#projects .project-copy > p,
+#education .education-row p,
+#certifications .education-row p {
+  color: #50584b;
+}
+
+#education h2,
+#certifications h2 {
+  margin-bottom: 30px;
+}
+#education .education-row,
+#certifications .education-row {
+  max-width: 640px;
+  padding: 24px;
+  background: rgba(253, 252, 247, 0.8);
+  border: 1px solid rgba(108, 111, 88, 0.15);
+  border-radius: 12px;
+}
+
+/* Keep the existing Skills image; soften its adjacent white panel. */
+#skills .skills-content {
+  background: #f6f4ec;
+}
+#skills .skills-photo {
+  background-color: #343b30;
+}
+
+@media (max-width: 700px) {
+  #about,
+  #projects,
+  #skills,
+  #education,
+  #certifications {
+    margin-block: 20px;
+    border-radius: 16px;
+  }
+  #projects,
+  #education,
+  #certifications {
+    padding: 24px 18px;
+    background-image:
+      linear-gradient(90deg,
+        rgba(250, 248, 242, 0.95),
+        rgba(250, 248, 242, 0.84)),
+      var(--section-photo);
+  }
+  #education,
+  #certifications {
+    min-height: 270px;
+  }
+  #education .education-row,
+  #certifications .education-row {
+    padding: 18px;
+  }
+  #projects .project-copy {
+    padding: 24px 18px;
+  }
+}
