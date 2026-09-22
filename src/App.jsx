@@ -68,11 +68,30 @@ const projects = [
 
 // Add other programming languages only when they reflect your actual skills.
 const skills = [
-  { title: 'Mathematics & Algorithms', text: 'Mathematical problem-solving · Sorting algorithms' },
-  { title: 'Database Management', text: 'MySQL · SQL · Relational tables · Database management' },
-  { title: 'Programming & Web Technologies', text: 'MATLAB · SQL · HTML · CSS · JavaScript · React' },
-  { title: 'Data Analysis', text: 'MATLAB · Excel · Public-data analysis · Food-industry research' },
-  { title: 'Finance', text: 'Financial analysis knowledge supported by passing CFA Program Level II' },
+  {
+    title: 'Programming Languages',
+    text: 'Python · Java · C++ · SQL · JavaScript · MATLAB',
+  },
+  {
+    title: 'Databases & Backend',
+    text: 'MySQL · Relational Database Design · User Authentication',
+  },
+  {
+    title: 'Web Technologies',
+    text: 'React · HTML · CSS',
+  },
+  {
+    title: 'Developer Tools',
+    text: 'Git · GitHub · Curso · VS Code',
+  },
+  {
+    title: 'Algorithms & Numerical Methods',
+    text: 'Sorting Algorithms ·  · Numerical Optimization · Iterative Methods',
+  },
+  {
+    title: 'Quantitative Analysis',
+    text: 'Autoregressive Models · OLS Regression · CAPM · Financial Statement Analysis',
+  },
 ]
 
 function ProjectCard({ category, title, description, bullets, tags, url }) {
@@ -201,7 +220,7 @@ function App() {
         </section>
 
         <section className="skills-section" id="skills">
-          <div className="skills-photo"><span>TECHNICAL SKILLS</span><h2>Behind the<br />implementation.</h2></div>
+          <div className="skills-photo"><span>WHAT I BRING</span><h2>Technical &amp;<br />Analytical Skills</h2></div>
           <div className="skills-content">
             <span className="eyebrow">TOOLS & TECHNOLOGIES</span>
             <h2>Skills</h2>
