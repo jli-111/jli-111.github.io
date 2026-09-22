@@ -82,7 +82,7 @@ const skills = [
   },
   {
     title: 'Developer Tools',
-    text: 'Git · GitHub · Curso · VS Code',
+    text: 'GitHub · Cursor · VS Code',
   },
   {
     title: 'Algorithms & Numerical Methods',
